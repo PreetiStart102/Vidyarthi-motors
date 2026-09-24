@@ -110,28 +110,48 @@ h5, h6, .h5, .h6, .fw-semi-bold {
     background-color: var(--secondary) !important;
 }
 
-/*** Video Demonstration Player Styling ***/
+/*** Vertical Video Showcase Device Frame ***/
+.video-showcase-frame {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto;
+    background: #0B0F19;
+    border-radius: 28px;
+    padding: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    border: 3px solid #1E293B;
+}
+
+.video-showcase-frame::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    z-index: 10;
+}
+
 .video-container {
     position: relative;
     width: 100%;
-    background: #000000;
-    border-radius: 1.25rem;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.16) !important;
+    background: #000000;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .video-container video {
     width: 100% !important;
     height: auto !important;
-    max-height: 540px;
     display: block;
-    object-fit: contain !important;
+    border-radius: 20px;
     background-color: #000000;
-    border-radius: 1.25rem;
 }
 
 /*** ULTRA-MODERN BUTTON DESIGN (PILL GRADIENTS WITH GLOW & ELEVATION) ***/
