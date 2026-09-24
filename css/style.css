@@ -110,6 +110,30 @@ h5, h6, .h5, .h6, .fw-semi-bold {
     background-color: var(--secondary) !important;
 }
 
+/*** Video Demonstration Player Styling ***/
+.video-container {
+    position: relative;
+    width: 100%;
+    background: #000000;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.16) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.video-container video {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 540px;
+    display: block;
+    object-fit: contain !important;
+    background-color: #000000;
+    border-radius: 1.25rem;
+}
+
 /*** ULTRA-MODERN BUTTON DESIGN (PILL GRADIENTS WITH GLOW & ELEVATION) ***/
 .btn {
     position: relative;
