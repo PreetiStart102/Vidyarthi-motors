@@ -32,12 +32,33 @@ body {
     overflow-x: clip;
     background-color: #FFFFFF;
     color: #334155;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 17px;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16.5px;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rubik', sans-serif;
+/* Headings with Modern Geometric Profile */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.015em;
+    color: #0F172A;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Preserve Exact Logo & Brand Aesthetics */
+.navbar-brand h2,
+.footer .d-flex h5 {
+    font-family: 'Rubik', 'Outfit', sans-serif !important;
+    letter-spacing: 0.5px;
+    font-weight: 800 !important;
 }
 
 .back-to-top {
@@ -65,7 +86,7 @@ h3, h4, .h3, .h4, .fw-medium {
 }
 
 h5, h6, .h5, .h6, .fw-semi-bold {
-    font-weight: 500 !important;
+    font-weight: 600 !important;
 }
 
 /* Color overrides */
