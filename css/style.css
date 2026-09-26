@@ -775,7 +775,7 @@ h5, h6, .h5, .h6, .fw-semi-bold {
 .patent-card:hover {
     transform: translateY(-8px) translateZ(0) !important;
     box-shadow: 0 16px 36px rgba(106, 27, 154, 0.18) !important;
-    border-color: var(--primary);
+    border-color: var(--border-color) !important;
 }
 
 .patent-badge-pill {
@@ -801,7 +801,7 @@ h5, h6, .h5, .h6, .fw-semi-bold {
 }
 
 .case-study-card:hover {
-    border-color: var(--primary);
+    border-color: var(--border-color) !important;
     transform: translateY(-8px) translateZ(0) !important;
     box-shadow: 0 16px 36px rgba(106, 27, 154, 0.18) !important;
 }
@@ -1275,7 +1275,7 @@ h5, h6, .h5, .h6, .fw-semi-bold {
 
 .product-card-modern:hover {
     transform: translateY(-8px) !important;
-    border-color: var(--primary) !important;
+    border-color: var(--border-color) !important;
     box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12) !important;
 }
 
