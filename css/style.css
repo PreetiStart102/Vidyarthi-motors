@@ -2108,3 +2108,22 @@ h5, h6, .h5, .h6, .fw-semi-bold {
     box-shadow: 0 6px 16px rgba(203, 32, 39, 0.25);
     flex-shrink: 0;
 }
+
+/*** ELEGANT RESPONSIVE MEDIUM SECTION HEADINGS ***/
+.section-header-title h2,
+.section-title,
+h2.display-6,
+h1.display-5 {
+    font-size: clamp(1.4rem, 2.2vw, 1.75rem) !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.01em !important;
+}
+
+@media (max-width: 575.98px) {
+    .section-header-title h2,
+    .section-title,
+    h2.display-6,
+    h1.display-5 {
+        font-size: 1.3rem !important;
+    }
+}
