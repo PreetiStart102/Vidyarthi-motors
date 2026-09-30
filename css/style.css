@@ -2265,29 +2265,6 @@ h1.display-5 {
     box-shadow: 0 15px 35px rgba(106, 27, 154, 0.25) !important;
 }
 
-/* Nav Item Link Hover Animation */
-.navbar-nav .nav-link {
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 4px;
-    left: 50%;
-    background-color: var(--primary);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-    width: 60%;
-}
-
 /* Footer Widget Title Single Line Formatting */
 .footer-widget-title {
     font-size: 1.02rem !important;
