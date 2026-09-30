@@ -495,143 +495,202 @@
     <!-- Verified Case Studies End -->
 
 
-    <!-- Testimonials Section Start -->
-    <div id="testimonials" class="container-fluid py-5 bg-white position-relative">
-        <div class="container py-3">
-            <div class="text-center mx-auto pb-4 wow fadeInUp section-header-title" data-wow-delay="0.1s" style="max-width: 680px;">
-                <div class="section-tag-badge mb-2"><i class="fa fa-quote-left me-1.5"></i> Verified Feedback</div>
-                <h2 class="display-6 mb-3 fw-bold text-dark">What Fleet Operators Say</h2>
-                <p class="text-muted mb-0">Direct feedback and performance validation reports from commercial vehicle owners running FST Active Air Enhancement.</p>
+    <!-- Testimonials Section Start (Continuous Scrolling Marquee Ticker) -->
+    <div id="testimonials" class="container-fluid py-4 bg-white position-relative overflow-hidden">
+        <div class="container pb-2">
+            <div class="text-center mx-auto pb-2 wow fadeInUp section-header-title" data-wow-delay="0.1s" style="max-width: 620px;">
+                <div class="section-tag-badge mb-1.5"><i class="fa fa-quote-left me-1.5"></i> Verified Feedback</div>
+                <h2 class="fs-4 mb-2 fw-bold text-dark">What Fleet Operators Say</h2>
+                <p class="small text-muted mb-0">Direct performance validation & feedback from verified fleet owners. <em>(Hover to pause continuous scroll)</em></p>
             </div>
+        </div>
 
-            <!-- Dynamic Category Filter Tabs -->
-            <div class="d-flex justify-content-center flex-wrap gap-2 mb-4 wow fadeInUp" data-wow-delay="0.2s">
-                <button type="button" class="btn btn-sm btn-outline-primary active testimonial-filter-btn" data-filter="all">All Feedback</button>
-                <button type="button" class="btn btn-sm btn-outline-primary testimonial-filter-btn" data-filter="bus">Bus Fleets</button>
-                <button type="button" class="btn btn-sm btn-outline-primary testimonial-filter-btn" data-filter="truck">Heavy Trucks</button>
-                <button type="button" class="btn btn-sm btn-outline-primary testimonial-filter-btn" data-filter="logistics">Logistics Fleets</button>
-            </div>
-
-            <!-- Interactive Carousel -->
-            <div id="testimonialCarousel" class="carousel slide testimonial-carousel py-2 wow fadeInUp" data-bs-ride="carousel" data-bs-interval="5000" data-wow-delay="0.3s">
-                <div class="carousel-inner">
-                    <!-- Slide 1: Narendra Bansal & S.K. Modi -->
-                    <div class="carousel-item active" data-category="bus">
-                        <div class="row g-4 justify-content-center">
-                            <div class="col-lg-6">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-header d-flex align-items-center justify-content-between mb-3">
-                                        <div class="d-flex align-items-center gap-3">
-                                            <div class="testimonial-avatar bg-primary text-white fw-bold">NB</div>
-                                            <div>
-                                                <h5 class="fw-bold mb-0 text-dark">Narendra Bansal</h5>
-                                                <small class="text-muted">Bansal Tour & Travels LLP • Rudrapur, UK</small>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-primary text-white px-3 py-2">Tata 1512 BS-III Bus</span>
-                                    </div>
-                                    <div class="star-rating mb-3 text-warning">
-                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                                        <span class="ms-2 small text-dark fw-bold">5.0 / 5.0</span>
-                                    </div>
-                                    <p class="testimonial-quote text-secondary mb-3">"We installed the FST unit on our Tata 1512 BS-III bus operating on daily routes. The mileage instantly improved from 5.01-5.05 to 5.26-5.57 km/litre with zero side effects. Vehicle pickup on steep gradients has improved noticeably."</p>
-                                    <div class="testimonial-metric d-flex align-items-center justify-content-between pt-3 border-top">
-                                        <span class="small text-primary fw-bold"><i class="fa fa-chart-line me-1"></i> +10.3% Mileage Gain</span>
-                                        <span class="small text-success fw-bold"><i class="fa fa-check-circle me-1"></i> Verified Field Result</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-header d-flex align-items-center justify-content-between mb-3">
-                                        <div class="d-flex align-items-center gap-3">
-                                            <div class="testimonial-avatar bg-secondary text-white fw-bold">SM</div>
-                                            <div>
-                                                <h5 class="fw-bold mb-0 text-dark">S. K. Modi</h5>
-                                                <small class="text-muted">Modi Transport Company • Gurugram, HR</small>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-secondary text-white px-3 py-2">BS-III & BS-IV Fleet</span>
-                                    </div>
-                                    <div class="star-rating mb-3 text-warning">
-                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                                        <span class="ms-2 small text-dark fw-bold">5.0 / 5.0</span>
-                                    </div>
-                                    <p class="testimonial-quote text-secondary mb-3">"FST technology delivered a consistent 15% diesel savings across our commercial fleet on long-distance highway routes. DEF (urea) consumption also dropped by ~18% along with a 50% reduction in visible smoke."</p>
-                                    <div class="testimonial-metric d-flex align-items-center justify-content-between pt-3 border-top">
-                                        <span class="small text-danger fw-bold"><i class="fa fa-gas-pump me-1"></i> 15% Fuel Savings</span>
-                                        <span class="small text-success fw-bold"><i class="fa fa-leaf me-1"></i> ~18% DEF Cut</span>
-                                    </div>
-                                </div>
+        <!-- Continuous Ticker Track -->
+        <div class="testimonial-scroll-wrap py-2">
+            <div class="testimonial-scroll-track">
+                <!-- Card 1: Narendra Bansal -->
+                <div class="testimonial-card-item">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center gap-2.5">
+                            <div class="testimonial-avatar bg-primary text-white fw-bold">NB</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.92rem;">Narendra Bansal</h6>
+                                <small class="text-muted" style="font-size: 0.74rem;">Bansal Tour & Travels • Rudrapur, UK</small>
                             </div>
                         </div>
+                        <span class="badge bg-primary text-white" style="font-size: 0.7rem;">Tata 1512 BS-III</span>
                     </div>
-
-                    <!-- Slide 2: Rajesh Sharma & Harpreet Singh -->
-                    <div class="carousel-item" data-category="truck logistics">
-                        <div class="row g-4 justify-content-center">
-                            <div class="col-lg-6">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-header d-flex align-items-center justify-content-between mb-3">
-                                        <div class="d-flex align-items-center gap-3">
-                                            <div class="testimonial-avatar bg-dark text-white fw-bold">RS</div>
-                                            <div>
-                                                <h5 class="fw-bold mb-0 text-dark">Rajesh Sharma</h5>
-                                                <small class="text-muted">R.S. Logistics • Rudrapur, UK</small>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-dark text-white px-3 py-2">Tata 5600cc 180hp Truck</span>
-                                    </div>
-                                    <div class="star-rating mb-3 text-warning">
-                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                                        <span class="ms-2 small text-dark fw-bold">5.0 / 5.0</span>
-                                    </div>
-                                    <p class="testimonial-quote text-secondary mb-3">"Our 180hp heavy truck ran continuously with FST for over 2 years and 100,000+ km. Mileage improved from 4.0 to 4.85 km/L, generating substantial financial savings with zero engine maintenance issues."</p>
-                                    <div class="testimonial-metric d-flex align-items-center justify-content-between pt-3 border-top">
-                                        <span class="small text-primary fw-bold"><i class="fa fa-tachometer-alt me-1"></i> 4.0 → 4.85 km/L</span>
-                                        <span class="small text-success fw-bold"><i class="fa fa-shield-alt me-1"></i> 2+ Years Continuous</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-header d-flex align-items-center justify-content-between mb-3">
-                                        <div class="d-flex align-items-center gap-3">
-                                            <div class="testimonial-avatar bg-primary text-white fw-bold">HS</div>
-                                            <div>
-                                                <h5 class="fw-bold mb-0 text-dark">Harpreet Singh</h5>
-                                                <small class="text-muted">Fleet Manager • Pantnagar, UK</small>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-primary text-white px-3 py-2">Ashok Leyland 6-Cylinder</span>
-                                    </div>
-                                    <div class="star-rating mb-3 text-warning">
-                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                                        <span class="ms-2 small text-dark fw-bold">5.0 / 5.0</span>
-                                    </div>
-                                    <p class="testimonial-quote text-secondary mb-3">"Engine responsiveness under full payload is noticeably smoother. The device requires no electrical or mechanical modifications and paid for itself within just 7 weeks of daily haulage operations."</p>
-                                    <div class="testimonial-metric d-flex align-items-center justify-content-between pt-3 border-top">
-                                        <span class="small text-secondary fw-bold"><i class="fa fa-clock me-1"></i> 7-Week Payback</span>
-                                        <span class="small text-success fw-bold"><i class="fa fa-cogs me-1"></i> Zero Maintenance</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="star-rating mb-2 text-warning" style="font-size: 0.78rem;">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <span class="ms-1.5 small text-dark fw-bold">5.0</span>
+                    </div>
+                    <p class="testimonial-quote text-secondary mb-2.5" style="font-size: 0.85rem; line-height: 1.45;">"Installed FST on our Tata 1512 bus. Mileage improved from 5.01 to 5.57 km/L with zero side effects and better hill pickup."</p>
+                    <div class="d-flex align-items-center justify-content-between pt-2 border-top" style="font-size: 0.75rem;">
+                        <span class="text-primary fw-bold"><i class="fa fa-chart-line me-1"></i> +10.3% Mileage</span>
+                        <span class="text-success fw-bold"><i class="fa fa-check-circle me-1"></i> Verified Result</span>
                     </div>
                 </div>
 
-                <!-- Controls & Indicators -->
-                <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
-                    <button class="btn btn-outline-primary btn-square rounded-circle" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                        <i class="fa fa-chevron-left"></i>
-                    </button>
-                    <div class="carousel-indicators position-static m-0">
-                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                <!-- Card 2: S. K. Modi -->
+                <div class="testimonial-card-item">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center gap-2.5">
+                            <div class="testimonial-avatar bg-secondary text-white fw-bold">SM</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.92rem;">S. K. Modi</h6>
+                                <small class="text-muted" style="font-size: 0.74rem;">Modi Transport • Gurugram, HR</small>
+                            </div>
+                        </div>
+                        <span class="badge bg-secondary text-white" style="font-size: 0.7rem;">BS-III & BS-IV Fleet</span>
                     </div>
-                    <button class="btn btn-outline-primary btn-square rounded-circle" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                        <i class="fa fa-chevron-right"></i>
-                    </button>
+                    <div class="star-rating mb-2 text-warning" style="font-size: 0.78rem;">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <span class="ms-1.5 small text-dark fw-bold">5.0</span>
+                    </div>
+                    <p class="testimonial-quote text-secondary mb-2.5" style="font-size: 0.85rem; line-height: 1.45;">"FST delivered a consistent 15% diesel savings across our commercial fleet with ~18% DEF urea cut and 50% smoke reduction."</p>
+                    <div class="d-flex align-items-center justify-content-between pt-2 border-top" style="font-size: 0.75rem;">
+                        <span class="text-danger fw-bold"><i class="fa fa-gas-pump me-1"></i> 15% Fuel Cut</span>
+                        <span class="text-success fw-bold"><i class="fa fa-leaf me-1"></i> ~18% DEF Cut</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Rajesh Sharma -->
+                <div class="testimonial-card-item">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center gap-2.5">
+                            <div class="testimonial-avatar bg-dark text-white fw-bold">RS</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.92rem;">Rajesh Sharma</h6>
+                                <small class="text-muted" style="font-size: 0.74rem;">R.S. Logistics • Rudrapur, UK</small>
+                            </div>
+                        </div>
+                        <span class="badge bg-dark text-white" style="font-size: 0.7rem;">Tata 180hp Truck</span>
+                    </div>
+                    <div class="star-rating mb-2 text-warning" style="font-size: 0.78rem;">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <span class="ms-1.5 small text-dark fw-bold">5.0</span>
+                    </div>
+                    <p class="testimonial-quote text-secondary mb-2.5" style="font-size: 0.85rem; line-height: 1.45;">"Ran continuously for over 2 years and 100,000+ km on 180hp platform. Mileage increased from 4.0 to 4.85 km/L."</p>
+                    <div class="d-flex align-items-center justify-content-between pt-2 border-top" style="font-size: 0.75rem;">
+                        <span class="text-primary fw-bold"><i class="fa fa-tachometer-alt me-1"></i> 4.0 → 4.85 km/L</span>
+                        <span class="text-success fw-bold"><i class="fa fa-shield-alt me-1"></i> 2+ Years Continuous</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Harpreet Singh -->
+                <div class="testimonial-card-item">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center gap-2.5">
+                            <div class="testimonial-avatar bg-primary text-white fw-bold">HS</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.92rem;">Harpreet Singh</h6>
+                                <small class="text-muted" style="font-size: 0.74rem;">Fleet Manager • Pantnagar, UK</small>
+                            </div>
+                        </div>
+                        <span class="badge bg-primary text-white" style="font-size: 0.7rem;">Ashok Leyland 6-Cyl</span>
+                    </div>
+                    <div class="star-rating mb-2 text-warning" style="font-size: 0.78rem;">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <span class="ms-1.5 small text-dark fw-bold">5.0</span>
+                    </div>
+                    <p class="testimonial-quote text-secondary mb-2.5" style="font-size: 0.85rem; line-height: 1.45;">"Engine responsiveness under heavy payload is noticeably smoother. Paid back its cost within 7 weeks of operation."</p>
+                    <div class="d-flex align-items-center justify-content-between pt-2 border-top" style="font-size: 0.75rem;">
+                        <span class="text-secondary fw-bold"><i class="fa fa-clock me-1"></i> 7-Week Payback</span>
+                        <span class="text-success fw-bold"><i class="fa fa-cogs me-1"></i> Zero Maintenance</span>
+                    </div>
+                </div>
+
+                <!-- REPEATED SET FOR INFINITE SEAMLESS LOOP -->
+                <!-- Card 1 Duplicate -->
+                <div class="testimonial-card-item">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center gap-2.5">
+                            <div class="testimonial-avatar bg-primary text-white fw-bold">NB</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.92rem;">Narendra Bansal</h6>
+                                <small class="text-muted" style="font-size: 0.74rem;">Bansal Tour & Travels • Rudrapur, UK</small>
+                            </div>
+                        </div>
+                        <span class="badge bg-primary text-white" style="font-size: 0.7rem;">Tata 1512 BS-III</span>
+                    </div>
+                    <div class="star-rating mb-2 text-warning" style="font-size: 0.78rem;">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <span class="ms-1.5 small text-dark fw-bold">5.0</span>
+                    </div>
+                    <p class="testimonial-quote text-secondary mb-2.5" style="font-size: 0.85rem; line-height: 1.45;">"Installed FST on our Tata 1512 bus. Mileage improved from 5.01 to 5.57 km/L with zero side effects and better hill pickup."</p>
+                    <div class="d-flex align-items-center justify-content-between pt-2 border-top" style="font-size: 0.75rem;">
+                        <span class="text-primary fw-bold"><i class="fa fa-chart-line me-1"></i> +10.3% Mileage</span>
+                        <span class="text-success fw-bold"><i class="fa fa-check-circle me-1"></i> Verified Result</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 Duplicate -->
+                <div class="testimonial-card-item">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center gap-2.5">
+                            <div class="testimonial-avatar bg-secondary text-white fw-bold">SM</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.92rem;">S. K. Modi</h6>
+                                <small class="text-muted" style="font-size: 0.74rem;">Modi Transport • Gurugram, HR</small>
+                            </div>
+                        </div>
+                        <span class="badge bg-secondary text-white" style="font-size: 0.7rem;">BS-III & BS-IV Fleet</span>
+                    </div>
+                    <div class="star-rating mb-2 text-warning" style="font-size: 0.78rem;">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <span class="ms-1.5 small text-dark fw-bold">5.0</span>
+                    </div>
+                    <p class="testimonial-quote text-secondary mb-2.5" style="font-size: 0.85rem; line-height: 1.45;">"FST delivered a consistent 15% diesel savings across our commercial fleet with ~18% DEF urea cut and 50% smoke reduction."</p>
+                    <div class="d-flex align-items-center justify-content-between pt-2 border-top" style="font-size: 0.75rem;">
+                        <span class="text-danger fw-bold"><i class="fa fa-gas-pump me-1"></i> 15% Fuel Cut</span>
+                        <span class="text-success fw-bold"><i class="fa fa-leaf me-1"></i> ~18% DEF Cut</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 Duplicate -->
+                <div class="testimonial-card-item">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center gap-2.5">
+                            <div class="testimonial-avatar bg-dark text-white fw-bold">RS</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.92rem;">Rajesh Sharma</h6>
+                                <small class="text-muted" style="font-size: 0.74rem;">R.S. Logistics • Rudrapur, UK</small>
+                            </div>
+                        </div>
+                        <span class="badge bg-dark text-white" style="font-size: 0.7rem;">Tata 180hp Truck</span>
+                    </div>
+                    <div class="star-rating mb-2 text-warning" style="font-size: 0.78rem;">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <span class="ms-1.5 small text-dark fw-bold">5.0</span>
+                    </div>
+                    <p class="testimonial-quote text-secondary mb-2.5" style="font-size: 0.85rem; line-height: 1.45;">"Ran continuously for over 2 years and 100,000+ km on 180hp platform. Mileage increased from 4.0 to 4.85 km/L."</p>
+                    <div class="d-flex align-items-center justify-content-between pt-2 border-top" style="font-size: 0.75rem;">
+                        <span class="text-primary fw-bold"><i class="fa fa-tachometer-alt me-1"></i> 4.0 → 4.85 km/L</span>
+                        <span class="text-success fw-bold"><i class="fa fa-shield-alt me-1"></i> 2+ Years Continuous</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 Duplicate -->
+                <div class="testimonial-card-item">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center gap-2.5">
+                            <div class="testimonial-avatar bg-primary text-white fw-bold">HS</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.92rem;">Harpreet Singh</h6>
+                                <small class="text-muted" style="font-size: 0.74rem;">Fleet Manager • Pantnagar, UK</small>
+                            </div>
+                        </div>
+                        <span class="badge bg-primary text-white" style="font-size: 0.7rem;">Ashok Leyland 6-Cyl</span>
+                    </div>
+                    <div class="star-rating mb-2 text-warning" style="font-size: 0.78rem;">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <span class="ms-1.5 small text-dark fw-bold">5.0</span>
+                    </div>
+                    <p class="testimonial-quote text-secondary mb-2.5" style="font-size: 0.85rem; line-height: 1.45;">"Engine responsiveness under heavy payload is noticeably smoother. Paid back its cost within 7 weeks of operation."</p>
+                    <div class="d-flex align-items-center justify-content-between pt-2 border-top" style="font-size: 0.75rem;">
+                        <span class="text-secondary fw-bold"><i class="fa fa-clock me-1"></i> 7-Week Payback</span>
+                        <span class="text-success fw-bold"><i class="fa fa-cogs me-1"></i> Zero Maintenance</span>
+                    </div>
                 </div>
             </div>
         </div>
