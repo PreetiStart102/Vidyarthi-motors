@@ -38,4 +38,29 @@
         }
     });
 
+    // Testimonials Dynamic Category Filter
+    $(document).ready(function () {
+        $('.testimonial-filter-btn').on('click', function () {
+            $('.testimonial-filter-btn').removeClass('active');
+            $(this).addClass('active');
+
+            var filter = $(this).attr('data-filter');
+            var carousel = $('#testimonialCarousel');
+
+            if (filter === 'all') {
+                carousel.find('.carousel-item').removeClass('d-none active');
+                carousel.find('.carousel-item').first().addClass('active');
+            } else {
+                carousel.find('.carousel-item').each(function () {
+                    var categories = $(this).attr('data-category') || '';
+                    if (categories.indexOf(filter) !== -1) {
+                        $(this).removeClass('d-none').addClass('active').siblings().removeClass('active');
+                    } else {
+                        $(this).addClass('d-none').removeClass('active');
+                    }
+                });
+            }
+        });
+    });
+
 })(jQuery);
