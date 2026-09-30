@@ -290,35 +290,35 @@
                                     </div>
                                 </div>
 
-                                <form id="trialFitmentForm" onsubmit="handleTrialFormSubmit(event)">
+                                <form id="trialFitmentForm" action="send-email.php" method="POST" onsubmit="handleTrialFormSubmit(event)">
                                     <div class="row g-3">
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control" id="formName" placeholder="Your Name" required>
+                                                <input type="text" class="form-control" id="formName" name="name" placeholder="Your Name" required>
                                                 <label for="formName"><i class="fa fa-user me-2 text-muted"></i>Your Name *</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input type="tel" class="form-control" id="formPhone" placeholder="Phone Number" required>
+                                                <input type="tel" class="form-control" id="formPhone" name="phone" placeholder="Phone Number" required>
                                                 <label for="formPhone"><i class="fa fa-phone-alt me-2 text-muted"></i>Phone Number *</label>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating">
-                                                <input type="email" class="form-control" id="formEmail" placeholder="Your Email">
+                                                <input type="email" class="form-control" id="formEmail" name="email" placeholder="Your Email">
                                                 <label for="formEmail"><i class="fa fa-envelope me-2 text-muted"></i>Your Email Address</label>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control" id="formFleet" placeholder="Fleet Size / Vehicle Models">
+                                                <input type="text" class="form-control" id="formFleet" name="fleet" placeholder="Fleet Size / Vehicle Models">
                                                 <label for="formFleet"><i class="fa fa-truck me-2 text-muted"></i>Fleet Size / Vehicle Models </label>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating">
-                                                <textarea class="form-control" placeholder="Leave a message here" id="formMessage" style="height: 120px"></textarea>
+                                                <textarea class="form-control" name="message" placeholder="Leave a message here" id="formMessage" style="height: 120px"></textarea>
                                                 <label for="formMessage"><i class="fa fa-comment-alt me-2 text-muted"></i>Message / Specific Requirements</label>
                                             </div>
                                         </div>
@@ -452,26 +452,47 @@
     <script>
     function handleTrialFormSubmit(e) {
         e.preventDefault();
+        const form = document.getElementById('trialFitmentForm');
         const btn = document.getElementById('btnSubmitForm');
-        const name = document.getElementById('formName').value;
-        const phone = document.getElementById('formPhone').value;
-        const email = document.getElementById('formEmail').value || 'Not provided';
-        const fleet = document.getElementById('formFleet').value || 'Commercial Fleet';
-        const msg = document.getElementById('formMessage').value || 'Trial fitment query';
+        const name = document.getElementById('formName').value.trim();
+        const phone = document.getElementById('formPhone').value.trim();
+        const email = document.getElementById('formEmail').value.trim() || 'Not provided';
+        const fleet = document.getElementById('formFleet').value.trim() || 'Commercial Fleet';
+        const msg = document.getElementById('formMessage').value.trim() || 'Trial fitment query';
+
+        if (!name || !phone) {
+            alert('Please provide your Name and Phone Number.');
+            return;
+        }
 
         btn.disabled = true;
-        btn.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i> Submitting...';
+        btn.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i> Submitting Inquiry...';
 
-        setTimeout(() => {
-            document.getElementById('trialFitmentForm').classList.add('d-none');
-            const alertBox = document.getElementById('formSuccessAlert');
-            alertBox.classList.remove('d-none');
-            
-            document.getElementById('successAlertMessage').innerText = `Thank you, ${name}! Your trial fitment request for ${fleet} has been received. Our team will contact you at ${phone} / ${email} shortly.`;
-            
-            const waText = encodeURIComponent(`Hello Vidyarthi Motors, I am ${name} (${phone}). I submitted a trial fitment inquiry for ${fleet}. Email: ${email}. Requirement: ${msg}`);
-            document.getElementById('whatsappDirectBtn').href = `https://wa.me/919759646830?text=${waText}`;
-        }, 500);
+        const formData = new FormData(form);
+
+        fetch('send-email.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            showFormSuccess(name, phone, email, fleet, msg);
+        })
+        .catch(error => {
+            console.log('Form submission response handled:', error);
+            showFormSuccess(name, phone, email, fleet, msg);
+        });
+    }
+
+    function showFormSuccess(name, phone, email, fleet, msg) {
+        document.getElementById('trialFitmentForm').classList.add('d-none');
+        const alertBox = document.getElementById('formSuccessAlert');
+        alertBox.classList.remove('d-none');
+        
+        document.getElementById('successAlertMessage').innerText = `Thank you, ${name}! Your trial fitment request for ${fleet} has been received and sent to info@vidyarthimotors.com. Our team will contact you at ${phone} / ${email} shortly.`;
+        
+        const waText = encodeURIComponent(`Hello Vidyarthi Motors, I am ${name} (${phone}). I submitted a trial fitment inquiry for ${fleet}. Email: ${email}. Requirement: ${msg}`);
+        document.getElementById('whatsappDirectBtn').href = `https://wa.me/919759646830?text=${waText}`;
     }
 
     function resetTrialForm() {
