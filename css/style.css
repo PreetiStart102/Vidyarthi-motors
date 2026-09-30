@@ -701,17 +701,19 @@ h5, h6, .h5, .h6, .fw-semi-bold {
 
 @media (max-width: 575.98px) {
     .carousel-control-prev {
-        left: 4px !important;
-        width: 38px !important;
+        left: 2px !important;
+        width: 36px !important;
+        z-index: 10 !important;
     }
     .carousel-control-next {
-        right: 4px !important;
-        width: 38px !important;
+        right: 2px !important;
+        width: 36px !important;
+        z-index: 10 !important;
     }
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
-        width: 2.0rem !important;
-        height: 2.0rem !important;
+        width: 1.8rem !important;
+        height: 1.8rem !important;
         background-color: rgba(15, 23, 42, 0.75) !important;
         border: 2px solid #FFFFFF !important;
         border-radius: 50% !important;
@@ -719,10 +721,10 @@ h5, h6, .h5, .h6, .fw-semi-bold {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
     }
     #header-carousel .carousel-caption {
-        padding-left: 24px !important;
-        padding-right: 24px !important;
-        padding-top: 20px !important;
-        padding-bottom: 20px !important;
+        padding-left: 46px !important;
+        padding-right: 46px !important;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
     }
     #header-carousel .carousel-caption .container {
         padding-left: 0 !important;
@@ -2335,4 +2337,85 @@ h1.display-5 {
     background-clip: text !important;
     display: inline-block !important;
     font-weight: 800 !important;
+}
+
+/* Single Line Topbar Contact Items for Mobile/Tablets */
+.topbar-contact-single-line {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    width: 100% !important;
+}
+
+.topbar-contact-single-line a {
+    white-space: nowrap !important;
+}
+
+@media (max-width: 767.98px) {
+    .topbar-contact-single-line {
+        font-size: 0.74rem !important;
+        gap: 10px !important;
+        padding: 4px 6px !important;
+    }
+    .topbar-contact-single-line a {
+        font-size: 0.74rem !important;
+    }
+    .topbar-contact-single-line i {
+        font-size: 0.72rem !important;
+        margin-right: 3px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbar-contact-single-line {
+        font-size: 0.67rem !important;
+        gap: 5px !important;
+    }
+    .topbar-contact-single-line a {
+        font-size: 0.67rem !important;
+    }
+}
+
+/* Continuous Marquee Ticker Loop for Topbar Left on Mobile & Tablets */
+@media (max-width: 991.98px) {
+    .topbar-ticker-wrap {
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        width: 100% !important;
+        position: relative !important;
+        padding: 5px 0 !important;
+    }
+    
+    .topbar-ticker-content {
+        display: inline-flex !important;
+        align-items: center !important;
+        white-space: nowrap !important;
+        animation: topbarTickerLoop 20s linear infinite !important;
+        will-change: transform;
+    }
+    
+    .topbar-ticker-item {
+        display: inline-flex !important;
+        align-items: center !important;
+        padding-right: 50px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .topbar-ticker-item.d-none-desktop {
+        display: none !important;
+    }
+}
+
+@keyframes topbarTickerLoop {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
