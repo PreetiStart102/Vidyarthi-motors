@@ -2287,3 +2287,11 @@ h1.display-5 {
 .navbar-nav .nav-link.active::after {
     width: 60%;
 }
+
+/* Footer Widget Title Single Line Formatting */
+.footer-widget-title {
+    font-size: 1.02rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    white-space: nowrap !important;
+}
