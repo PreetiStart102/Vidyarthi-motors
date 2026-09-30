@@ -1,25 +1,18 @@
 (function ($) {
     "use strict";
 
-    // Enforce permanent mute on all video elements
-    function enforceMute() {
-        document.querySelectorAll('video').forEach(function (video) {
+    // Initialize default mute on video elements for browser autoplay compliance
+    function initVideoMute() {
+        document.querySelectorAll('video[autoplay]').forEach(function (video) {
             video.muted = true;
             video.defaultMuted = true;
-            video.volume = 0;
-            video.addEventListener('volumechange', function () {
-                if (!video.muted || video.volume > 0) {
-                    video.muted = true;
-                    video.volume = 0;
-                }
-            });
         });
     }
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', enforceMute);
+        document.addEventListener('DOMContentLoaded', initVideoMute);
     } else {
-        enforceMute();
+        initVideoMute();
     }
 
     // Instantly hide spinner if present

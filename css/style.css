@@ -2127,3 +2127,163 @@ h1.display-5 {
         font-size: 1.3rem !important;
     }
 }
+
+/*** HIGH-PERFORMANCE RICH ANIMATION SUITE ***/
+
+/* Keyframe Definitions */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(106, 27, 154, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 12px rgba(106, 27, 154, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(106, 27, 154, 0);
+    }
+}
+
+@keyframes pulseGlowDanger {
+    0% {
+        box-shadow: 0 0 0 0 rgba(203, 32, 39, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 14px rgba(203, 32, 39, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(203, 32, 39, 0);
+    }
+}
+
+@keyframes floatSmooth {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Micro-Interactions for Cards & Interactive Elements */
+.fact-card, 
+.patent-card, 
+.case-study-card, 
+.service-item, 
+.workflow-step-card,
+.cert-badge-card {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                border-color 0.4s ease !important;
+}
+
+.fact-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+.patent-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px rgba(106, 27, 154, 0.15) !important;
+    border-color: rgba(106, 27, 154, 0.3) !important;
+}
+
+.case-study-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.1) !important;
+}
+
+.service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.16) !important;
+}
+
+/* Button Animations & Micro-Interactions */
+.btn {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18) !important;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 10px 25px rgba(106, 27, 154, 0.35) !important;
+}
+
+.btn-secondary:hover {
+    box-shadow: 0 10px 25px rgba(203, 32, 39, 0.35) !important;
+}
+
+/* Floating WhatsApp Button Pulse Animation */
+.btn-whatsapp-float {
+    animation: pulseGlowDanger 2.5s infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.btn-whatsapp-float:hover {
+    transform: scale(1.12) rotate(6deg) !important;
+}
+
+/* Badge Floating Effect */
+.section-tag-badge {
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.section-tag-badge:hover {
+    transform: translateY(-2px) scale(1.03);
+}
+
+.cert-badge-img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cert-badge-img:hover {
+    transform: scale(1.12) rotate(3deg) !important;
+}
+
+/* Image Zoom Animation */
+.img-hover-zoom {
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.img-hover-zoom:hover {
+    transform: scale(1.06) !important;
+}
+
+/* Video Frame Hover Glow */
+.border.rounded-3.shadow-sm.overflow-hidden.bg-black {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.border.rounded-3.shadow-sm.overflow-hidden.bg-black:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(106, 27, 154, 0.25) !important;
+}
+
+/* Nav Item Link Hover Animation */
+.navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 4px;
+    left: 50%;
+    background-color: var(--primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 60%;
+}
