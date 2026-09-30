@@ -1442,6 +1442,16 @@ h5, h6, .h5, .h6, .fw-semi-bold {
     color: var(--secondary) !important;
 }
 
+.footer-branch-list {
+    gap: 16px !important;
+}
+
+.footer-branch-item p {
+    margin-bottom: 3px !important;
+    line-height: 1.4 !important;
+}
+
+
 .copyright {
     background: #020617 !important;
     color: #64748B !important;
