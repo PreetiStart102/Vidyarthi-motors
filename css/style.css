@@ -595,7 +595,7 @@ h5, h6, .h5, .h6, .fw-semi-bold {
         position: -webkit-sticky !important;
         position: sticky !important;
         top: 0 !important;
-        padding: 10px 16px !important;
+        padding: 12px 24px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
@@ -701,17 +701,17 @@ h5, h6, .h5, .h6, .fw-semi-bold {
 
 @media (max-width: 575.98px) {
     .carousel-control-prev {
-        left: 2px !important;
-        width: 44px !important;
+        left: 4px !important;
+        width: 38px !important;
     }
     .carousel-control-next {
-        right: 2px !important;
-        width: 44px !important;
+        right: 4px !important;
+        width: 38px !important;
     }
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
-        width: 2.2rem !important;
-        height: 2.2rem !important;
+        width: 2.0rem !important;
+        height: 2.0rem !important;
         background-color: rgba(15, 23, 42, 0.75) !important;
         border: 2px solid #FFFFFF !important;
         border-radius: 50% !important;
@@ -719,10 +719,14 @@ h5, h6, .h5, .h6, .fw-semi-bold {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
     }
     #header-carousel .carousel-caption {
-        padding-left: 54px !important;
-        padding-right: 54px !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
         padding-top: 20px !important;
         padding-bottom: 20px !important;
+    }
+    #header-carousel .carousel-caption .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     #header-carousel .carousel-caption h1 {
         font-size: 1.7rem !important;
@@ -2281,4 +2285,44 @@ h1.display-5 {
     font-weight: 700 !important;
     color: #FFFFFF !important;
     white-space: nowrap !important;
+}
+
+/* Responsive Edge Breathing Room for Smaller Screen Sizes */
+@media (max-width: 767.98px) {
+    .container, 
+    .container-fluid:not(.px-0) {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    
+    .navbar {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    
+    .hero-text-wrap {
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+    }
+
+    .topbar-right {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .navbar .navbar-brand {
+        padding-left: 0 !important;
+    }
+    
+    #header-carousel .carousel-caption {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
 }
